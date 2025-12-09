@@ -1,164 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Renata Costa | Estética Avançada</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              gold: {
-                400: '#eecf76',
-                500: '#d4af37', // Primary Gold
-                600: '#b08d26',
-              },
-              dark: {
-                900: '#0a0a0a', // Deep background
-                800: '#121212', // Card background
-                700: '#1e1e1e', // Input background
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renata Costa | Estética Avançada</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              400: '#eecf76',
+              500: '#d4af37', // Primary Gold
+              600: '#b08d26',
             },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
+            dark: {
+              900: '#0a0a0a', // Deep background
+              800: '#121212', // Card background
+              700: '#1e1e1e', // Input background
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
           },
         },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0a;
+      color: #f3f4f6;
+    }
+
+    /* Gradientes Dourados Elegantes */
+    .gold-gradient {
+      background: linear-gradient(135deg, #d4af37 0%, #eecf76 50%, #d4af37 100%);
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #eecf76 0%, #d4af37 50%, #eecf76 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Efeito de Brilho Dourado */
+    .gold-glow {
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3),
+        0 0 40px rgba(212, 175, 55, 0.2),
+        0 0 60px rgba(212, 175, 55, 0.1);
+    }
+
+    .gold-glow-hover:hover {
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.5),
+        0 0 60px rgba(212, 175, 55, 0.3),
+        0 0 90px rgba(212, 175, 55, 0.2);
+      transition: box-shadow 0.3s ease;
+    }
+
+    /* Bordas Douradas Animadas */
+    .gold-border-animated {
+      position: relative;
+      border: 2px solid transparent;
+      background: linear-gradient(#121212, #121212) padding-box,
+        linear-gradient(135deg, #d4af37, #eecf76, #d4af37) border-box;
+    }
+
+    /* Glassmorphism Elegante */
+    .glass-gold {
+      background: rgba(18, 18, 18, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    /* Animações Suaves */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0a0a0a;
-        color: #f3f4f6;
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-      
-      /* Gradientes Dourados Elegantes */
-      .gold-gradient {
-        background: linear-gradient(135deg, #d4af37 0%, #eecf76 50%, #d4af37 100%);
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -1000px 0;
       }
-      
-      .gold-gradient-text {
-        background: linear-gradient(135deg, #eecf76 0%, #d4af37 50%, #eecf76 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+
+      100% {
+        background-position: 1000px 0;
       }
-      
-      /* Efeito de Brilho Dourado */
-      .gold-glow {
-        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3),
-                    0 0 40px rgba(212, 175, 55, 0.2),
-                    0 0 60px rgba(212, 175, 55, 0.1);
+    }
+
+    @keyframes pulse-gold {
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
       }
-      
-      .gold-glow-hover:hover {
-        box-shadow: 0 0 30px rgba(212, 175, 55, 0.5),
-                    0 0 60px rgba(212, 175, 55, 0.3),
-                    0 0 90px rgba(212, 175, 55, 0.2);
-        transition: box-shadow 0.3s ease;
+
+      50% {
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
       }
-      
-      /* Bordas Douradas Animadas */
-      .gold-border-animated {
-        position: relative;
-        border: 2px solid transparent;
-        background: linear-gradient(#121212, #121212) padding-box,
-                    linear-gradient(135deg, #d4af37, #eecf76, #d4af37) border-box;
-      }
-      
-      /* Glassmorphism Elegante */
-      .glass-gold {
-        background: rgba(18, 18, 18, 0.7);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(212, 175, 55, 0.2);
-      }
-      
-      /* Animações Suaves */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      @keyframes shimmer {
-        0% {
-          background-position: -1000px 0;
-        }
-        100% {
-          background-position: 1000px 0;
-        }
-      }
-      
-      @keyframes pulse-gold {
-        0%, 100% {
-          box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-        }
-        50% {
-          box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
-        }
-      }
-      
-      .animate-fade-in-up {
-        animation: fadeInUp 0.6s ease-out;
-      }
-      
-      .animate-shimmer {
-        background: linear-gradient(90deg, 
-          rgba(212, 175, 55, 0) 0%, 
-          rgba(212, 175, 55, 0.3) 50%, 
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .animate-shimmer {
+      background: linear-gradient(90deg,
+          rgba(212, 175, 55, 0) 0%,
+          rgba(212, 175, 55, 0.3) 50%,
           rgba(212, 175, 55, 0) 100%);
-        background-size: 1000px 100%;
-        animation: shimmer 3s infinite;
-      }
-      
-      .animate-pulse-gold {
-        animation: pulse-gold 2s ease-in-out infinite;
-      }
-      
-      /* Linha Divisória Dourada */
-      .gold-divider {
-        height: 2px;
-        background: linear-gradient(90deg, 
-          transparent 0%, 
-          #d4af37 50%, 
+      background-size: 1000px 100%;
+      animation: shimmer 3s infinite;
+    }
+
+    .animate-pulse-gold {
+      animation: pulse-gold 2s ease-in-out infinite;
+    }
+
+    /* Linha Divisória Dourada */
+    .gold-divider {
+      height: 2px;
+      background: linear-gradient(90deg,
+          transparent 0%,
+          #d4af37 50%,
           transparent 100%);
-      }
-      
-      /* Hover Effects Elegantes */
-      .hover-lift {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      
-      .hover-lift:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
-      }
-      
-      /* Scroll Suave */
-      html {
-        scroll-behavior: smooth;
-      }
-      
-      /* Seleção de Texto Dourada */
-      ::selection {
-        background-color: #d4af37;
-        color: #0a0a0a;
-      }
-      
-      ::-moz-selection {
-        background-color: #d4af37;
-        color: #0a0a0a;
-      }
-    </style>
+    }
+
+    /* Hover Effects Elegantes */
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+    }
+
+    /* Scroll Suave */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Seleção de Texto Dourada */
+    ::selection {
+      background-color: #d4af37;
+      color: #0a0a0a;
+    }
+
+    ::-moz-selection {
+      background-color: #d4af37;
+      color: #0a0a0a;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -171,7 +177,10 @@
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>
