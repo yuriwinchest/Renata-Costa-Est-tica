@@ -35,6 +35,129 @@
         background-color: #0a0a0a;
         color: #f3f4f6;
       }
+      
+      /* Gradientes Dourados Elegantes */
+      .gold-gradient {
+        background: linear-gradient(135deg, #d4af37 0%, #eecf76 50%, #d4af37 100%);
+      }
+      
+      .gold-gradient-text {
+        background: linear-gradient(135deg, #eecf76 0%, #d4af37 50%, #eecf76 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      /* Efeito de Brilho Dourado */
+      .gold-glow {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3),
+                    0 0 40px rgba(212, 175, 55, 0.2),
+                    0 0 60px rgba(212, 175, 55, 0.1);
+      }
+      
+      .gold-glow-hover:hover {
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.5),
+                    0 0 60px rgba(212, 175, 55, 0.3),
+                    0 0 90px rgba(212, 175, 55, 0.2);
+        transition: box-shadow 0.3s ease;
+      }
+      
+      /* Bordas Douradas Animadas */
+      .gold-border-animated {
+        position: relative;
+        border: 2px solid transparent;
+        background: linear-gradient(#121212, #121212) padding-box,
+                    linear-gradient(135deg, #d4af37, #eecf76, #d4af37) border-box;
+      }
+      
+      /* Glassmorphism Elegante */
+      .glass-gold {
+        background: rgba(18, 18, 18, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+      }
+      
+      /* Animações Suaves */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes shimmer {
+        0% {
+          background-position: -1000px 0;
+        }
+        100% {
+          background-position: 1000px 0;
+        }
+      }
+      
+      @keyframes pulse-gold {
+        0%, 100% {
+          box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+        50% {
+          box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+        }
+      }
+      
+      .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+      }
+      
+      .animate-shimmer {
+        background: linear-gradient(90deg, 
+          rgba(212, 175, 55, 0) 0%, 
+          rgba(212, 175, 55, 0.3) 50%, 
+          rgba(212, 175, 55, 0) 100%);
+        background-size: 1000px 100%;
+        animation: shimmer 3s infinite;
+      }
+      
+      .animate-pulse-gold {
+        animation: pulse-gold 2s ease-in-out infinite;
+      }
+      
+      /* Linha Divisória Dourada */
+      .gold-divider {
+        height: 2px;
+        background: linear-gradient(90deg, 
+          transparent 0%, 
+          #d4af37 50%, 
+          transparent 100%);
+      }
+      
+      /* Hover Effects Elegantes */
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .hover-lift:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+      }
+      
+      /* Scroll Suave */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Seleção de Texto Dourada */
+      ::selection {
+        background-color: #d4af37;
+        color: #0a0a0a;
+      }
+      
+      ::-moz-selection {
+        background-color: #d4af37;
+        color: #0a0a0a;
+      }
     </style>
   <script type="importmap">
 {
