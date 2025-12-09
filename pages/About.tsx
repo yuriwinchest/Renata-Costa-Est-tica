@@ -51,13 +51,23 @@ const About: React.FC = () => {
               <img
                 src={renataProfile}
                 onError={(e) => {
-                  console.warn("Imagem não encontrada:", renataProfile);
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement!.style.backgroundColor = '#1e1e1e';
-                  e.currentTarget.parentElement!.innerHTML = '<div style="height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#d4af37; text-align:center; padding:20px;"><strong>Foto não carregou</strong><br/><span style="font-size:0.8em; color: #9ca3af; margin-top:10px;">Confirme se renata.jpg está na pasta public</span></div>';
+                  console.error("Erro ao carregar imagem:", renataProfile);
+                  const img = e.currentTarget as HTMLImageElement;
+                  if (img.src !== window.location.origin + '/renata.jpg') {
+                    img.src = window.location.origin + '/renata.jpg';
+                  } else {
+                    img.style.display = 'none';
+                    const parent = img.parentElement;
+                    if (parent) {
+                      parent.style.backgroundColor = '#1e1e1e';
+                      parent.innerHTML = '<div style="height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#d4af37; text-align:center; padding:20px;"><div style="width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg, #d4af37, #eecf76); display:flex; align-items:center; justify-content:center; margin-bottom:20px;"><svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><strong>Renata Costa</strong><br/><span style="font-size:0.8em; color: #9ca3af; margin-top:10px;">Enfermeira Esteta</span></div>';
+                    }
+                  }
                 }}
+                onLoad={() => console.log("Imagem About carregada!")}
                 alt="Enfermeira Renata Costa"
                 className="w-full h-full object-cover"
+                loading="eager"
               />
             </div>
             {/* Efeito Shimmer */}
