@@ -133,7 +133,7 @@ const Home: React.FC = () => {
               {
                 title: 'Transplantes Capilares',
                 desc: 'Técnicas modernas de restauração capilar para resultados de aparência natural e confiança renovada.',
-                img: 'https://images.unsplash.com/photo-1626049221162-81c81dc97f22?q=80&w=800&auto=format&fit=crop', // Hair/Scalp treatment
+                img: 'https://images.unsplash.com/photo-1595475207225-428b62bda831?q=80&w=800&auto=format&fit=crop', // Hair/Scalp treatment (New Image)
                 icon: '💇'
               }
             ].map((service, idx) => (
