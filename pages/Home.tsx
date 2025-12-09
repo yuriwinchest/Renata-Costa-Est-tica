@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Sparkles, Star, Award } from 'lucide-react';
 import Button from '../components/Button';
 
 // Caminho para a imagem na pasta public
-const renataProfile = "/renata.jpg";
+const renataProfile = "/renata.png";
 
 const Home: React.FC = () => {
   return (
@@ -72,8 +72,8 @@ const Home: React.FC = () => {
                     console.error("Tentando caminho alternativo...");
                     // Tenta caminho alternativo
                     const img = e.currentTarget as HTMLImageElement;
-                    if (img.src !== window.location.origin + '/renata.jpg') {
-                      img.src = window.location.origin + '/renata.jpg';
+                    if (img.src !== window.location.origin + '/renata.png') {
+                      img.src = window.location.origin + '/renata.png';
                     } else {
                       // Se ainda falhar, mostra placeholder
                       img.style.display = 'none';

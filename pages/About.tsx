@@ -3,7 +3,7 @@ import { GraduationCap, Briefcase, Heart, Sparkles, Award, Target } from 'lucide
 import Button from '../components/Button';
 
 // Caminho para a imagem na pasta public
-const renataProfile = "/renata.jpg";
+const renataProfile = "/renata.png";
 
 const About: React.FC = () => {
   return (
@@ -53,8 +53,8 @@ const About: React.FC = () => {
                 onError={(e) => {
                   console.error("Erro ao carregar imagem:", renataProfile);
                   const img = e.currentTarget as HTMLImageElement;
-                  if (img.src !== window.location.origin + '/renata.jpg') {
-                    img.src = window.location.origin + '/renata.jpg';
+                  if (img.src !== window.location.origin + '/renata.png') {
+                    img.src = window.location.origin + '/renata.png';
                   } else {
                     img.style.display = 'none';
                     const parent = img.parentElement;
