@@ -121,19 +121,19 @@ const Home: React.FC = () => {
               {
                 title: 'Emagrecimento com Mounjaro',
                 desc: 'Programas de emagrecimento com supervisão médica, utilizando Mounjaro para ajudá-la a atingir seus objetivos com segurança.',
-                img: 'https://picsum.photos/id/400/600/400',
+                img: 'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=800&auto=format&fit=crop', // Lifestyle healthy/measuring
                 icon: '💊'
               },
               {
                 title: 'Botox & Preenchedores',
                 desc: 'Rejuvenescimento facial não cirúrgico e redução de rugas para um visual renovado e natural.',
-                img: 'https://picsum.photos/id/64/600/400',
+                img: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=800&auto=format&fit=crop', // Aesthetic procedure/face
                 icon: '✨'
               },
               {
                 title: 'Transplantes Capilares',
                 desc: 'Técnicas modernas de restauração capilar para resultados de aparência natural e confiança renovada.',
-                img: 'https://picsum.photos/id/196/600/400',
+                img: 'https://images.unsplash.com/photo-1626049221162-81c81dc97f22?q=80&w=800&auto=format&fit=crop', // Hair/Scalp treatment
                 icon: '💇'
               }
             ].map((service, idx) => (
